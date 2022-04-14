@@ -1,10 +1,10 @@
 import React from 'react';
-import './App.sass';
-import { Button } from 'antd';
 import { ConfigProvider } from 'antd';
 import ruRu from 'antd/lib/locale/ru_RU';
 import 'antd/dist/antd.variable.min.css';
-import CommonModule from '@common/index';
+
+import CommonModule from '@common/presentation/view';
+import TestComponent from '@common/presentation/view/components';
 
 ConfigProvider.config({
 	theme: {
@@ -12,15 +12,14 @@ ConfigProvider.config({
 	},
 });
 
-function App() {
+function Main() {
 	return (
 		<ConfigProvider locale={ruRu}>
-			<CommonModule />
-			<div className="App test">
-				<Button type={'primary'}>test</Button>
-			</div>
+			<CommonModule>
+				<TestComponent />
+			</CommonModule>
 		</ConfigProvider>
 	);
 }
 
-export default App;
+export default Main;

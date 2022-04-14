@@ -1,0 +1,5 @@
+export const ActionsType = {
+	LOGIN_START: '[COMMON]: LOGIN_START',
+	LOGIN_SUCCESS: '[COMMON]: LOGIN_SUCCESS',
+	LOGIN_ERROR: '[COMMON]: LOGIN_ERROR',
+} as const;
