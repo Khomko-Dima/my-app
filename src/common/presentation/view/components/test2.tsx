@@ -1,11 +1,11 @@
-import React, { FC } from 'react';
+import React from 'react';
 import useCommonStoreHook from '@common/application/common-store.hooks';
 import { Button } from 'antd';
 import { LoginStartAction } from '@common/infrastructure/store/actions';
 
-const TestComponent: React.FC = () => {
+const Test2 = () => {
 	const { dispatch, store } = useCommonStoreHook();
-	console.log('render TestComponent');
+	console.log('render Test2');
 	return (
 		<>
 			<div>Lorem ipsum dolor sit amet.</div>
@@ -19,4 +19,4 @@ const TestComponent: React.FC = () => {
 		</>
 	);
 };
-export default TestComponent;
+export default Test2;

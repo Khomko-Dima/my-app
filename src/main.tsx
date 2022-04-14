@@ -5,6 +5,7 @@ import 'antd/dist/antd.variable.min.css';
 
 import CommonModule from '@common/presentation/view';
 import TestComponent from '@common/presentation/view/components';
+import Test2 from '@common/presentation/view/components/test2';
 
 ConfigProvider.config({
 	theme: {
@@ -17,6 +18,7 @@ function Main() {
 		<ConfigProvider locale={ruRu}>
 			<CommonModule>
 				<TestComponent />
+				<Test2 />
 			</CommonModule>
 		</ConfigProvider>
 	);
