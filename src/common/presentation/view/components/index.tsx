@@ -1,17 +1,19 @@
 import React, { FC } from 'react';
-import useCommonStoreHook from '@common/application/common-store.hooks';
 import { Button } from 'antd';
-import { LoginStartAction } from '@common/infrastructure/store/actions';
+import { useRecoilState, useRecoilValue, useRecoilValueLoadable } from 'recoil';
+import { getTodos, Todo } from '@common/infrastructure/store/atoms';
 
 const TestComponent: React.FC = () => {
-	const { dispatch, store } = useCommonStoreHook();
-	console.log('render TestComponent');
+	const userNameLoadable = useRecoilValueLoadable(getTodos);
+	const [value, setValue] = useRecoilState(getTodos);
+	console.log('userNameLoadable', userNameLoadable);
+	console.log('todoList', value);
 	return (
 		<>
 			<div>Lorem ipsum dolor sit amet.</div>
 			<Button
 				onClick={(event) => {
-					dispatch(LoginStartAction());
+					setValue({ id: '2', value: '2' } as Todo);
 				}}
 			>
 				test

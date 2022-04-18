@@ -1,7 +1,7 @@
 import React, { FC } from 'react';
-import { CommonStore } from '@common/infrastructure/store/provider';
+import { RecoilRoot } from 'recoil';
 
 const CommonModule: FC<{ children: any }> = ({ children }) => {
-	return <CommonStore>{children}</CommonStore>;
+	return <RecoilRoot>{children}</RecoilRoot>;
 };
 export default CommonModule;
