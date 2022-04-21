@@ -1,7 +1,7 @@
 import { createContext, Dispatch } from 'react';
-import { initialStore, Store } from '@common/infrastructure/store/reducer';
+import { initialStore, CommonStore } from '@common/infrastructure/store/reducer';
 
-export const CommonContext = createContext<{ store: Store; dispatch?: Dispatch<any> }>({
+type Context = Partial<{ store: CommonStore; dispatch: Dispatch<any> }>;
+export const CommonContext = createContext<Context>({
 	store: initialStore,
-	dispatch: () => {},
 });

@@ -5,10 +5,5 @@ import CommonReducer, { initialStore } from '@common/infrastructure/store/reduce
 export const CommonStore: FC<{ children: any }> = ({ children }) => {
 	const [store, dispatch] = useReducer(CommonReducer, initialStore);
 
-	return (
-		// @ts-ignore
-		<CommonContext.Provider value={{ store, dispatch }} displayName={'Common'}>
-			{children}
-		</CommonContext.Provider>
-	);
+	return <CommonContext.Provider value={{ store, dispatch }}>{children}</CommonContext.Provider>;
 };

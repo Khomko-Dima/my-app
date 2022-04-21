@@ -3,17 +3,20 @@ import { InferValueTypes } from '@common/infrastructure/types';
 import { ActionsType } from '@common/infrastructure/store/actions-type';
 
 type ActionTypes = ReturnType<InferValueTypes<typeof actions>>;
-export type Store = {
+export type CommonStore = {
 	isLogin: boolean;
 	isLoading: boolean;
 	error: any;
 };
-export const initialStore: Store = {
+export const initialStore: CommonStore = {
 	isLogin: false,
 	isLoading: false,
 	error: null,
 };
-export default function CommonReducer(state: Store = initialStore, actions: ActionTypes): Store {
+export default function CommonReducer(
+	state: CommonStore = initialStore,
+	actions: ActionTypes,
+): CommonStore {
 	switch (actions.type) {
 		case ActionsType.LOGIN_START:
 			return { ...state, isLoading: true };
