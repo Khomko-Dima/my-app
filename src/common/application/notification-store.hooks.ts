@@ -1,8 +1,8 @@
 import { useContext } from 'react';
-import { CommonContext } from '../infrastructure/store/common/context';
+import { NotificationContext } from '@common/infrastructure/store/notification/context';
 
-const useCommonStore = () => {
-	const { store, dispatch } = useContext(CommonContext);
+const useNotification = () => {
+	const { store, dispatch } = useContext(NotificationContext);
 	if (dispatch === undefined) {
 		throw new Error('dispatch must be inside a Provider with a value');
 	}
@@ -11,4 +11,4 @@ const useCommonStore = () => {
 	}
 	return { store, dispatch };
 };
-export default useCommonStore;
+export default useNotification;

@@ -1,4 +1,4 @@
-import { ActionsType } from '@common/infrastructure/store/actions-type';
+import { ActionsType } from '@common/infrastructure/store/common/actions-type';
 
 export const LoginStartAction = () => ({
 	type: ActionsType.LOGIN_START,

@@ -1,6 +1,6 @@
 import * as actions from './actions';
 import { InferValueTypes } from '@common/infrastructure/types';
-import { ActionsType } from '@common/infrastructure/store/actions-type';
+import { ActionsType } from '@common/infrastructure/store/common/actions-type';
 
 type ActionTypes = ReturnType<InferValueTypes<typeof actions>>;
 export type CommonStore = {
