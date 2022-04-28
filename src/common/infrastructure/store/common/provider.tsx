@@ -4,6 +4,5 @@ import Reducer, { initialStore } from '@common/infrastructure/store/common/reduc
 
 export const CommonStore: FC<{ children: any }> = ({ children }) => {
 	const [store, dispatch] = useReducer(Reducer, initialStore);
-
 	return <CommonContext.Provider value={{ store, dispatch }}>{children}</CommonContext.Provider>;
 };
