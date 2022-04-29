@@ -11,7 +11,7 @@ import NotificationComponent from '@common/presentation/components/notification.
 
 ConfigProvider.config({
 	theme: {
-		primaryColor: '#25b864',
+		primaryColor: '#18b2ff',
 	},
 });
 const queryClient = new QueryClient();

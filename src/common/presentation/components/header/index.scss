@@ -1,0 +1,14 @@
+@import "src/styles/vars";
+.header {
+  background-color: #0a1133;
+  .ant-page-header-heading-sub-title {
+    color: $primary
+  }
+  .ant-page-header-heading-title {
+    color: #fff;
+  }
+  .ant-page-header-footer {
+    color: #fff;
+    padding-bottom: 15px
+  }
+}
